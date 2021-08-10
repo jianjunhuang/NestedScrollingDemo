@@ -10,6 +10,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,6 +21,13 @@ class MainActivity : AppCompatActivity() {
         recyclerView.run {
             adapter = TestAdapter()
             layoutManager = LinearLayoutManager(this@MainActivity)
+        }
+        val refreshLayout = findViewById<SwipeRefreshLayout>(R.id.refresh_layout)
+        refreshLayout.setOnRefreshListener {
+            refreshLayout.postDelayed({
+                refreshLayout.isRefreshing = false
+            }, 1000)
+
         }
     }
 
