@@ -10,7 +10,7 @@
 
         <com.jianjun.nestedscrollingdemo.NestedScrollingChildView
             android:layout_width="match_parent"
-            android:layout_height="300dp" />
+            android:layout_height="400dp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler"

@@ -36,6 +36,9 @@ class NestedScrollingParentView : LinearLayout, NestedScrollingParent3 {
     override fun onNestedScrollAccepted(child: View, target: View, axes: Int, type: Int) {
         parentHelper.onNestedScrollAccepted(child, target, axes, type)
         Log.i(TAG, "onNestedScrollAccepted: ")
+        (getChildAt(0) as? NestedScrollingChildView)?.let {
+            it.cancelFling()
+        }
     }
 
     override fun onStopNestedScroll(target: View, type: Int) {
