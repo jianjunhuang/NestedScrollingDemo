@@ -38,6 +38,10 @@ Demo for [NestedScrollingChild3](https://developer.android.com/reference/kotlin/
 
 需要注意，滑动过程和 fling 的过程，在调用接口的方法时，`type` 参数是不一样的。
 
+图例
+
+![NestedScrolling](nestedscrolling.png)
+
 ## Why 3
 > https://juejin.cn/post/6844903761060577294
 
